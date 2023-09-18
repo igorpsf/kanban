@@ -1,5 +1,5 @@
 import './App.css';
-import {useEffect, useMemo, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import Kanban from "./components/Kanban";
 import {fetchStatuses} from "./api/StatusesServices";
@@ -8,7 +8,6 @@ import useFetching from "./hooks/useFetching";
 import MyModal from "./components/ui/Modal/MyModal";
 import CreateModal from "./components/CreateModal";
 import DeleteModal from "./components/DeleteModal";
-import task from "./components/Task";
 import {useSearch} from "./hooks/useSearch";
 
 function App() {
@@ -106,7 +105,7 @@ function App() {
     useEffect(() => {
         getStatuses()
         getTasks()
-    }, [])
+    })
 
     return (
         <div className="App">
