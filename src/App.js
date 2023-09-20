@@ -105,7 +105,7 @@ function App() {
     useEffect(() => {
         getStatuses()
         getTasks()
-    })
+    }, [])
 
     return (
         <div className="App">

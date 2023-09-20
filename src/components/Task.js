@@ -2,8 +2,8 @@ import React from 'react';
 import UpdateModal from "./UpdateModal";
 
 const Task = ({task, changePriority, setOpenModal, changeStatus, statuses, priorities, editTask}) => {
-    console.log(priorities[5])
-    console.log(statuses[0].status)
+    //console.log(priorities[5])
+    //console.log(statuses[0].status)
     return (
         <div>
             <div className="card mb-3">
