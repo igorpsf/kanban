@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = 'http://3.101.20.102:5000/api/tasks'
+const url = 'https://kanban-server-qq74.onrender.com/tasks'
 
 export async function fetchTasks(){
     const response = await axios.get(url)
@@ -12,14 +12,14 @@ export async function postTask(newTask){
     return response
 }
 
-export const updateTask = async (_id, updatedTask) => {
-    const taskUrl = `${url}/${_id}`
+export const updateTask = async (id, updatedTask) => {
+    const taskUrl = `${url}/${id}`
     const response = await axios.patch(taskUrl, updatedTask)
     return response
 }
 
-export const deleteTask = async (_id) => {
-    const taskUrl = `${url}/${_id}`
+export const deleteTask = async (id) => {
+    const taskUrl = `${url}/${id}`
     const response = await axios.delete(taskUrl)
     return response
 }

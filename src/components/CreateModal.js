@@ -55,7 +55,7 @@ const CreateModal = ({priorities, statuses, createTask, setOpenModal}) => {
             <div className="form-floating mb-3">
                 <select onChange={(event) => setNewTask({...newTask, status: event.target.value})} value={newTask.status} className="form-select" id="floatingSelect" aria-label="Select status">
                     <option selected></option>
-                    {statuses.map((el) => <option key={el._id} value={el.title}>{el.title}</option>)}
+                    {statuses.map((el) => <option key={el.id} value={el.title}>{el.title}</option>)}
                 </select>
                 <label htmlFor="statusSelector">Status</label>
             </div>

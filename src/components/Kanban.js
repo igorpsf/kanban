@@ -37,7 +37,7 @@ const Kanban = ({
                 <div className="row align-items-start">
                     {statuses.map(status =>
                         <StatusColumns
-                            key={status._id}
+                            key={status.id}
                             status={status}
                             tasks={tasks}
                             changePriority={changePriority}

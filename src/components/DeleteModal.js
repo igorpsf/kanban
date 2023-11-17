@@ -4,7 +4,7 @@ const DeleteModal = ({openModal, setOpenModal, removeTask}) => {
 
     const [inputValue, setInputValue] = useState('');
     const onDelete = () => {
-        removeTask(openModal.data._id)
+        removeTask(openModal.data.id)
         onClose()
     }
 

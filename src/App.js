@@ -58,9 +58,9 @@ function App() {
         }
     }
 
-    const changePriority = async (_id, updatedTask) => {
+    const changePriority = async (id, updatedTask) => {
         try {
-            await updateTask(_id, updatedTask);
+            await updateTask(id, updatedTask);
             await getTasks()
         } catch(err){
             console.log(err)
@@ -68,9 +68,9 @@ function App() {
         }
     }
 
-    const editTask = async (_id, updatedTask) => {
+    const editTask = async (id, updatedTask) => {
         try {
-            await updateTask(_id, updatedTask);
+            await updateTask(id, updatedTask);
             await getTasks()
         } catch(err){
             console.log(err)
@@ -78,9 +78,9 @@ function App() {
         }
     }
 
-    const removeTask = async (_id) => {
+    const removeTask = async (id) => {
         try {
-            await deleteTask(_id)
+            await deleteTask(id)
             await getTasks()
         } catch(err){
             console.log(err)
@@ -88,13 +88,13 @@ function App() {
         }
     }
 
-    const changeStatus = async (_id, status, direction) => {
+    const changeStatus = async (id, status, direction) => {
         const statusesArray = statuses.map(status => status.title)
         const oldStatusIndex = statusesArray.indexOf(status)
         const newStatusIndex = oldStatusIndex + direction
         const updatedTask = { status: statusesArray[newStatusIndex]}
         try {
-            await updateTask(_id, updatedTask)
+            await updateTask(id, updatedTask)
             await getTasks()
         } catch(err){
             console.log(err)

@@ -13,13 +13,13 @@ const Task = ({task, changePriority, setOpenModal, changeStatus, statuses, prior
                     <button
                         type="button"
                         className="btn btn-outline-primary btn-sm ms-2 me-1"
-                        onClick={() => changePriority(task._id, {priority: +task.priority + 1})}
+                        onClick={() => changePriority(task.id, {priority: +task.priority + 1})}
                         disabled={priorities[5].toString() === task.priority}
                     >↑</button>
                     <button
                         type="button"
                         className="btn btn-outline-primary btn-sm"
-                        onClick={() => changePriority(task._id, {priority: task.priority - 1})}
+                        onClick={() => changePriority(task.id, {priority: task.priority - 1})}
                         disabled={priorities[0].toString() === task.priority}
                     >↓</button>
                 </div>
@@ -31,13 +31,13 @@ const Task = ({task, changePriority, setOpenModal, changeStatus, statuses, prior
                         <button
                             type="button"
                             className='btn btn-outline-primary btn-sm me-1'
-                            onClick={() => changeStatus(task._id, task.status, -1)}
+                            onClick={() => changeStatus(task.id, task.status, -1)}
                             disabled={statuses[0].status === task.status}
                         >←</button>
                         <button
                             type="button"
                             className='btn btn-outline-primary btn-sm'
-                            onClick={() => changeStatus(task._id, task.status, 1)}
+                            onClick={() => changeStatus(task.id, task.status, 1)}
                             disabled={statuses[statuses.length - 1].status === task.status}
                         >→</button>
                     </div>
