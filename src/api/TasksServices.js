@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = 'https://kanban-server-qq74.onrender.com/tasks'
+const url = 'http://3.101.20.102:5000/api/tasks'
 
 export async function fetchTasks(){
     const response = await axios.get(url)
