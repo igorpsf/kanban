@@ -4,7 +4,7 @@ import classes from './MyModal.module.css'
 const MyModal = ({openModal, setOpenModal, children}) => {
 
     //console.log(classes.modal)
-    const modalStateName = ['create', 'delete', 'update']
+    const modalStateName = ['create', 'delete']
     //console.log(children)
     return (
         <div className={openModal.isOpen ? classes.modal + " " + classes.modal_active: classes.modal}
