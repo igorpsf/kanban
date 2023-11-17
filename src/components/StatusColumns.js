@@ -8,7 +8,7 @@ const StatusColumns = ({status, tasks, changePriority, setOpenModal, changeStatu
 
                 {tasks.filter(task => task.status === status.title).map(task =>
                     <Task
-                        key={task.id}
+                        key={task._id}
                         task={task}
                         changePriority={changePriority}
                         setOpenModal={setOpenModal}

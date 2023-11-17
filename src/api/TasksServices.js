@@ -12,14 +12,14 @@ export async function postTask(newTask){
     return response
 }
 
-export const updateTask = async (id, updatedTask) => {
-    const taskUrl = `${url}/${id}`
+export const updateTask = async (_id, updatedTask) => {
+    const taskUrl = `${url}/${_id}`
     const response = await axios.patch(taskUrl, updatedTask)
     return response
 }
 
-export const deleteTask = async (id) => {
-    const taskUrl = `${url}/${id}`
+export const deleteTask = async (_id) => {
+    const taskUrl = `${url}/${_id}`
     const response = await axios.delete(taskUrl)
     return response
 }
